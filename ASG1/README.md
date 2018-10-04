@@ -1,8 +1,11 @@
-##Requirements
+#Requirements
+
 Build a website with three pages:
+
 • index.html
 • todo.html
 • todoForm.html
+
 Each of the three pages consists of a header, footer, a content panel, and a sidebar. These four
 components should be visually separated using borders and/or background colors or images.
 Directly below the header is a navigation bar with elements labeled “Home”, “To Do List”, and “To Do
