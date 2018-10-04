@@ -1,0 +1,25 @@
+.content h1, .content form {
+    margin: .5em 1em;
+}
+
+.submitButton, .submitButton:hover {
+    padding: .5em;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    font-size: 1em;
+    transition: background-color .2s, color .2s;;
+}
+
+.submitButton {
+    border: solid 1px transparent;
+    background-color: #1ABC9C;
+    color: white;
+}
+
+.submitButton:hover {
+    border: solid 1px #1ABC9C;
+    background-color: transparent;
+    color: #1ABC9C;
+    cursor: pointer;
+}
