@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="static/todospa.css" rel="stylesheet" type="text/css">
+
+    <!-- defer attribute delays execution of script until page finished parsing -->
+    <!-- (element nodes must exist for event listeners to be attached) -->
+    <!-- <script type="text/javascript" src="/static/todospa5.js" defer></script>
+ -->
+</head>
+
+<body>
+    <!--  
+        Below are templates for tasks and task edit forms.
+        Note their style attribute: display:none
+        This keeps the templates from being displayed by the browser.
+        This device can be used to filter the task list locally (in the browser)
+            without accessing the server.
+     -->
+    <!-- template for tasks -->
+    <div id="task-template" style="display: none">
+        <section class="todoitem">
+            <input class="taskid" hidden/>
+            <!-- <input class="due_date_input hide" type="date" /> -->
+            <!-- <input class="post_date_input hide" type="date" /> -->
+            <p class="taskdescription"></p>
+            <p class="post_date"></p>
+            <p class="due_date"></p>
+            <ul class="itembuttons">
+                <li>
+                    <input type="checkbox" class="status" name=status value="done" />
+                </li>
+                <li>
+                    <input class="editbtn" type="button" value="Edit" />
+                </li>
+                <li>
+                    <input class="deletebtn" type="button" value="Delete" />>
+                </li>
+                <li class="hide">
+                    <input class="save-btn" type="button" value="Save">
+                </li>
+                <li class="hide">
+                    <input class="cancel-btn" type="button" value="Cancel">
+                </li>
+            </ul>
+        </section>
+    </div>
+    <!-- template for task edits -->
+    <div id="edit-task-template" style="display: none">
+        <section class="todoitem todoForm">
+            <input form="form-" class="taskid" value="" hidden/>
+            <p class="taskdescription">
+                <textarea form="form-" name="taskdescription" placeholder="Please describe your task"></textarea>
+            </p>
+            <p class="post_date">
+                <input type="date" name="post_date_input" value="">
+            </p>
+            <p class="due_date">
+                <input type="date" name="due_date_input" value="">
+            </p>
+            <ul class="itembuttons">
+                <li>
+                    <input form="form-" class="status" type="checkbox" name=status value="done" />
+                </li>
+                <li>
+                    <input form="form-" class="editbtn" type="button" value="Save" />
+                </li>
+                <li>
+                    <input         class="deletebtn" type="button" value="Cancel" />>
+                </li>
+            </ul>
+            <!-- for each copy of this template, the form will receive a unique id
+                 of the shape "form-{formCount}" where formCount is a member of 
+                 the docElems object (see top of todospa.js)
+                 The form attribute of the input elements and the text area 
+                 in this <section> needs to be set to the same value.
+            -->
+            <form id="form-" ></form>
+        </section>
+    </div>
+
+
+    <div id="container">
+        <header>
+            <div id="todotitle">
+                <div id="muchtodo">
+                    <h1>So Much To Do</h1>
+                </div>
+                <div id="littletime">
+                    <h6>So Little Time</h6>
+                </div>
+            </div>
+        </header>
+
+        <aside class="sidebar-left">
+            <h3>Bonus Features</h3>
+            <p>
+                Post Date/Time and Due Date
+            </p>
+            <p>Update Due Date individually</p>
+            <p>Sort Todo List by date</p>
+        </aside>
+
+        <div id="center">
+        <article id="newlist">
+            <!-- holds new tasks while being edited -->
+        </article>
+    
+        <article id="todolist">
+            <!-- created after todo list is loaded by createTodoList() -->
+        </article>
+        </div>
+
+        <aside class="sidebar-right">
+            <div class="controls">
+                
+                <section class="control">
+                    <input class="controlbtn" type="button" value="New task" />
+                </section>
+
+                <section class="control">
+            
+                    <form id="filterform" action="" method=""></form>
+                        <fieldset>
+                            <legend>Tasks</legend>
+                            <div class='option'><input type="radio" name="filter" value="all" checked/>all</div>
+                            <div class='option'><input type="radio" name="filter" value="done"/>done</div>
+                            <div class='option'><input type="radio" name="filter" value="tbd" />tbd</div>
+                        </fieldset>
+                        <input class="controlbtn" type="button" value="Filter" />
+                    </form>
+                </section>
+                <section class="control">
+                    <form id="orderForm" action="" method=""></form>
+                        <fieldset>
+                            <legend>Order</legend>
+                            <div class='option'><input type="radio" name="order" value="taskid:asc" checked />id: asc</div>                            
+                            <div class='option'><input type="radio" name="order" value="post_date:asc" />post: asc</div>
+                            <div class='option'><input type="radio" name="order" value="post_date:desc" />post:desc</div>
+                            <div class='option'><input type="radio" name="order" value="due_date:asc" />due:asc</div>
+                            <div class='option'><input type="radio" name="order" value="due_date:desc" />due:desc</div>
+                        </fieldset>
+                        <input class="controlbtn" type="button" value="Order" />
+                    </form>
+
+                </section>
+            </div>
+        </aside>
+
+        <footer>
+            <div><p>some stuff here <br/><br/>and some more stufff</p></div>
+        </footer>
+    </div> <!--  end container -->
+    <script type="text/javascript" src="/static/todospa.js"></script>
+</body>
+
+</html>

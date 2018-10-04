@@ -1,0 +1,1 @@
+Run dbinit.py first for loading database, then run todospa.py. Thank you! 
