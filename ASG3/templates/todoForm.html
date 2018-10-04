@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CMPS183: Homework 3 - To Do Form</title>
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/todoForm.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>CMPS183: Homework 3</header>
+    <hr>
+    <nav>
+        <a href="/index">Home</a> |
+        <a href="/list">To Do List</a> |
+        <a href="/new">New</a>
+    </nav>
+    <div class="main">
+        <div class="sidebar">
+            <p>
+                <strong>Note: </strong>I just read a nice book: 'Intro to Java: From beginer to give up'. Top 1st seller at Amazon.
+                :) (ins:tikacrota)</p>
+        </div>
+
+        <div class="content">
+            <h1>Todo Form</h1>
+            <form id="newTodoForm">
+                <label>
+                    Title:
+                    <input type="text" id="title" placeholder="Please input title" required>
+                </label>
+                <br>
+                <label>
+                    description:
+                    <input type="text" id="description" placeholder="Please input description" required>
+                </label>
+                <br>
+                <label>
+                    Date:
+                    <input type="date" id="date" placeholder="(yyyy-MM-dd)" required>
+                </label>
+                <br>
+                <button class="submitButton">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <a href="#">About Us</a> |
+        <a href="#">Contact</a> |
+        <a href="#">Privacy</a> |
+        <a href="#">Credits</a>
+    </footer>
+    <script type="text/javascript" src="/static/scripts/database.js"></script>
+    <script type="text/javascript" src="/static/scripts/todoForm.js"></script>
+</body>
+
+</html>

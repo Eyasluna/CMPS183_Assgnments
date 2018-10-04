@@ -1,0 +1,95 @@
+.content h1, .content table, .todoListButtons {
+    margin: .5em 1em;
+}
+
+.todoListButtons button, .todoListButtons button:hover {
+    padding: .5em;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    font-size: 1em;
+    transition: background-color .2s, color .2s;;
+}
+
+.todoListButtons button {
+    border: solid 1px transparent;
+    background-color: #1ABC9C;
+    color: white;
+}
+
+.todoListButtons button:hover {
+    border: solid 1px #1ABC9C;
+    background-color: transparent;
+    color: #1ABC9C;
+    cursor: pointer;
+}
+
+.modal{
+        display: none;/*隐藏模态框*/
+        width: 100%;
+        height: 100%;
+        position: fixed;/*定位方式为固定定位*/
+        overflow: auto;/*不滚动*/
+        background-color: rgba(0,0,0,0.7);
+        top: 0px;
+        left: 0px;
+        z-index: 1;/*置于页面图层之上*/
+    }
+.modaldiv{
+  width:80%;
+  height:600px;
+  margin:0 auto;
+  background-color: white;
+}
+.mcaption{
+  width:99%;
+  height:80px;
+}
+.mbody{
+  width:99%;
+  height:300px;
+  padding:30px;
+  font-size: 20px;
+}
+.textinput{
+  height:30px;
+  font-size:20px;
+}
+.h{
+  top: 20px;
+  left: 14%;
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+}
+.close{
+       font-size: 40px;
+       font-weight: bold;
+       position: absolute;
+       top: 20px;
+       right: 14%;
+       color:#f1f1f1;
+   }
+.close:hover,
+.close:focus{
+     color:#bbb;
+     cursor:pointer;
+ }
+ .editbtn, .editbtn:hover{
+   padding: .5em;
+   -webkit-border-radius: .5em;
+   -moz-border-radius: .5em;
+   border-radius: .5em;
+   font-size: 1em;
+   transition: background-color .2s, color .2s;;
+ }
+ .editbtn{
+   border: solid 1px transparent;
+   background-color: #1ABC9C;
+   color: white;
+ }
+.todoselect{
+  height:30px;
+  width:300px;
+  font-size:15px;
+}

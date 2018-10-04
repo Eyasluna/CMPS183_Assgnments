@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>cmps183: Homework 1 - To Do List</title>
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/todo.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>CMPS183: Homework 3</header>
+    <hr>
+    <nav>
+        <a href="/index">Home</a> |
+        <a href="/list">To Do List</a> |
+        <a href="/new">New</a>
+    </nav>
+    <div class="main">
+        <div class="sidebar">
+            <p>
+                <strong>Note: </strong>About to graduate. But I can do nothing. How can I get a job at Apple, get a Tesla Model S
+                and a house at San Jose?:(</p>
+            </p>
+        </div>
+
+        <div class="content">
+            <h1>Todo List</h1>
+            <br>
+            <div class="todoListButtons">
+                <select class="todoselect" id="todooption" onchange="sort()">
+                    <option value="posted">Sort by Posted Date</option>
+                    <option value="updated">Sort by Last Updated date</option>
+                    <option value="due">Sort by Due Date</option>
+                </select>
+            </div>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Task Title</th>
+                        <th>Task description</th>
+                        <th>Due Date</th>
+                        <th>Posted</th>
+                        <th>Last Updated</th>
+                        <th>Done</th>
+                        <th>Option</th>
+                    </tr>
+                </thead>
+                <tbody id="todoListTableBody">
+                </tbody>
+            </table>
+            <div class="todoListButtons">
+                <button onclick="show_all()">Show all</button>
+                <button onclick="show_complete();">Show completed</button>
+                <button onclick="show_wait();">Show to do</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="#">About Us</a> |
+        <a href="#">Contact</a> |
+        <a href="#">Privacy</a> |
+        <a href="#">Credits</a>
+    </footer>
+    <script type="text/javascript" src="/static/scripts/database.js"></script>
+    <script type="text/javascript" src="/static/scripts/todo.js"></script>
+</body>
+
+</html>
