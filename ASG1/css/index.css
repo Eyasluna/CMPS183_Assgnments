@@ -1,0 +1,29 @@
+.portrait, .profile, .courses {
+    float: left;
+}
+
+.portrait {
+    width: 30%;
+}
+
+.portrait img {
+    padding: 1em;
+}
+
+.profile {
+    width: 70%;
+}
+
+.profile p {
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.courses {
+    padding: 0 1em;
+    width: 100%;
+}
+
+.courses h1 {
+    margin: 0;
+}

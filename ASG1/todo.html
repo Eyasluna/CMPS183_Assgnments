@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CMPS183: Homework 1 - To Do List</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/todo.css" rel="stylesheet">
+</head>
+<body>
+<header>CMPS183: Homework 1</header>
+<hr>
+<nav>
+    <a href="index.html">Home</a> |
+    <a href="todo.html">To Do List</a> |
+    <a href="todoForm.html">To Do Form</a>
+</nav>
+<div class="main">
+    <div class="sidebar">
+        <p><strong>Note: </strong>About to graduate. But I can do nothing. How can I get a job at Apple, get a Tesla Model S and a house at San Jose?:(</p>
+    </div>
+
+    <div class="content">
+        <h1>Todo List</h1>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Task Title</th>
+                <th>Task Notes</th>
+                <th>Due Date</th>
+                <th>Done</th>
+            </tr>
+            </thead>
+            <tbody id="todoListTableBody">
+            <tr>
+                <td>Go shopping</td>
+                <td>Get some milk</td>
+                <td>2018-02-20</td>
+                <td><input type="checkbox" title="done"></td>
+            </tr>
+            <tr>
+                <td>Go shopping</td>
+                <td>Get some milk</td>
+                <td>2018-02-20</td>
+                <td><input type="checkbox" title="done"></td>
+            </tr>
+            <tr>
+                <td>CCCP</td>
+                <td>Get some milk</td>
+                <td>2018-02-20</td>
+                <td><input type="checkbox" title="done"></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="todoListButtons">
+            <button onclick="updateTodoListData();">Show all</button>
+            <button onclick="updateTodoListData(1);">Show completed</button>
+            <button onclick="updateTodoListData(2);">Show to do</button>
+        </div>
+    </div>
+</div>
+<footer>
+    <a href="#">About Us</a> |
+    <a href="#">Contact</a> |
+    <a href="#">Privacy</a> |
+    <a href="#">Credits</a>
+</footer>
+<script type="text/javascript" src="scripts/todo.js"></script>
+</body>
+</html>
